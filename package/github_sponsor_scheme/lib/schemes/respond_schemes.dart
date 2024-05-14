@@ -36,10 +36,9 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 List<Map> respond_schemes = [
   {
-"@type": "accountData",
-
-          "username": "",
-          "avatar": "",
+    "@type": "accountData",
+    "username": "",
+    "avatar": "",
   },
   {
     "@type": "sponsor",

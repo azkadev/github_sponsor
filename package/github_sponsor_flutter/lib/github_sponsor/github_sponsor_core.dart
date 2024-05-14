@@ -1,4 +1,4 @@
-// ignore_for_file: empty_catches
+// ignore_for_file: empty_catches, unnecessary_brace_in_string_interps
 
 /* <!-- START LICENSE -->
 
@@ -41,7 +41,6 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 import 'package:general_lib/general_lib.dart';
 import 'package:github/github.dart';
-import 'package:github_sponsor_scheme/scheme/respond_scheme/account_data.dart';
 import 'package:github_sponsor_scheme/scheme/respond_scheme/respond_scheme.dart';
 import 'package:http/http.dart';
 import 'package:mime/mime.dart';
@@ -56,11 +55,25 @@ class GithubSponsor {
     String? token,
   }) {
     token ??= token_github;
+    if (token.isEmpty) {
+      return GitHub(auth: const Authentication.anonymous());
+    }
     return GitHub(auth: Authentication.withToken(token));
   }
 
-  Future<AccountData> getMe({String? token}) async {
+  Future<AccountData> getMe({
+    String? token,
+    String? username,
+  }) async {
     token ??= token_github;
+
+    if (token.isEmpty) {
+      var res = await gitHub(token: token).users.getUser(username);
+      return AccountData.create(
+        username: res.login,
+        avatar: res.avatarUrl,
+      );
+    }
     var res = await gitHub(token: token).users.getCurrentUser();
     return AccountData.create(
       username: res.login,
@@ -161,13 +174,11 @@ class GithubSponsor {
     return Uri.parse("https://github.com/${repositorySlug.owner}/${repositorySlug.name}/");
   }
 
-  Future<SponsorData> getSponsor({
+  Future<Sponsor> getSponsor({
     required String username,
   }) async {
-    SponsorData sponsorData = SponsorData({
-      
-    });
-    Uri uri = Uri.parse("");
+    Sponsor sponsorData = Sponsor({});
+    Uri uri = Uri.parse("https://ghs.vercel.app/v2/sponsors/${username}");
     Response response = await get(uri);
     try {
       sponsorData.rawData = json.decode(response.body);
@@ -177,6 +188,7 @@ class GithubSponsor {
     } else {
       sponsorData["@type"] = "error";
     }
+
     return sponsorData;
   }
 }
