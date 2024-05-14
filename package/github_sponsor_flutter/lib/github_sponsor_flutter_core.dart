@@ -154,7 +154,7 @@ class _GithubSponsorFlutterState extends State<GithubSponsorFlutter> {
           child: RepaintBoundary(
             key: globalKey,
             child: SizedBox(
-              width: 1000,
+              width: 1000, 
               child: SponsorPage(
                 username: github_username,
                 githubSponsor: githubSponsor,
