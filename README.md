@@ -33,7 +33,9 @@ setelah berhasil jalan, applikasi automatis akan menggenerate gambar sponsor lal
 ## Example Github Actions
 
 ## Example Result
-![alt text](.github/sponsor_.png)
+
+![](.github/sponsor_.png)
+
 ![](.github/sponsor.png)
 <!-- <img align="center" src=".github/sponsor.png"> -->
 
