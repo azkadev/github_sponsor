@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+ln -s /usr/share/github-sponsor-flutter/github_sponsor_flutter /usr/bin/github-sponsor-flutter-app
+chmod +x /usr/bin/github-sponsor-flutter-app
+exit 0

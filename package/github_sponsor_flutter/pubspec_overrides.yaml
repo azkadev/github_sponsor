@@ -1,6 +1,6 @@
-# melos_managed_dependency_overrides: edge_dart_runtime
-dependency_overrides:
-  github_sponsor:
-    path: ../github_sponsor
-  github_sponsor_scheme:
-    path: ../github_sponsor_scheme
+# # melos_managed_dependency_overrides: edge_dart_runtime
+# dependency_overrides:
+#   github_sponsor:
+#     path: ../github_sponsor
+#   github_sponsor_scheme:
+#     path: ../github_sponsor_scheme

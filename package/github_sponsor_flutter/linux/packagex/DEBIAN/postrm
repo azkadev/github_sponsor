@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+rm -rf /usr/bin/github-sponsor-flutter
+rm -rf /usr/bin/github-sponsor-flutter-app
+rm -rf /usr/local/share/github-sponsor-flutter

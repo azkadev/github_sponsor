@@ -1,16 +1,18 @@
 /* <!-- START LICENSE -->
 
 
-Program Ini Di buat Oleh DEVELOPER Dari PERUSAHAAN GLOBAL CORPORATION 
-Social Media: 
+This Software / Program / Source Code Created By Developer From Company GLOBAL CORPORATION
+Social Media:
 
-- Youtube: https://youtube.com/@Global_Corporation 
-- Github: https://github.com/globalcorporation
-- TELEGRAM: https://t.me/GLOBAL_CORP_ORG_BOT
+   - Youtube: https://youtube.com/@Global_Corporation 
+   - Github: https://github.com/globalcorporation
+   - TELEGRAM: https://t.me/GLOBAL_CORP_ORG_BOT
 
-Seluruh kode disini di buat 100% murni tanpa jiplak / mencuri kode lain jika ada akan ada link komment di baris code
+All code script in here created 100% original without copy / steal from other code if we copy we add description source at from top code
 
-Jika anda mau mengedit pastikan kredit ini tidak di hapus / di ganti!
+If you wan't edit you must add credit me (don't change)
+
+If this Software / Program / Source Code has you
 
 Jika Program ini milik anda dari hasil beli jasa developer di (Global Corporation / apapun itu dari turunan itu jika ada kesalahan / bug / ingin update segera lapor ke sub)
 
@@ -30,10 +32,56 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 
 <!-- END LICENSE --> */
-library github_sponsor_flutter;
+import 'package:flutter/material.dart';
+import 'package:general_lib_flutter/general_lib_flutter.dart';
+import 'package:github_sponsor_flutter/github_sponsor_flutter_core.dart';
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+void githubSponsorFlutter({
+  required List<String> args,
+}) async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const GithubSponsorFlutterAppMain());
+}
+
+GeneralLibFlutterApp generalLibFlutterApp = GeneralLibFlutterApp();
+
+class GithubSponsorFlutterAppMain extends StatefulWidget {
+  const GithubSponsorFlutterAppMain({super.key});
+
+  @override
+  State<GithubSponsorFlutterAppMain> createState() => _GithubSponsorFlutterAppMainState();
+}
+
+class _GithubSponsorFlutterAppMainState extends State<GithubSponsorFlutterAppMain> {
+  @override
+  Widget build(BuildContext context) {
+    return GeneralLibFlutterAppMain(
+      generalLibFlutterApp: generalLibFlutterApp,
+      builder: (themeMode, lightTheme, darkTheme, widget) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          themeMode: themeMode,
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          // builder: (context, child) {
+          //   return Stack(
+          //     children: [
+          //       MaterialApp(
+          //         home: ChatPage.test(),
+          //       ),
+          //       Positioned.fill(
+          //         child: child ?? const SizedBox.shrink(),
+          //       ),
+          //     ],
+          //   );
+
+          //   // return Simulate(home: child ?? SizedBox.shrink());
+          // },
+          home: const GithubSponsorFlutter(),
+        );
+      },
+    );
+  }
 }
