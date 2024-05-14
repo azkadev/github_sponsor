@@ -6,9 +6,13 @@ This **library create** because i'want **add github sponsor** image on **readme*
 
 ## Technology / Framework / Depencies
 
-1. [DART]()
+1. [DART]() 
 2. [FLUTTER]() Generate Image
 3. [XVFB]() Run Application without gpu or monitor (on server / github action)
+
+## Why Need Flutter
+
+i don't have skills make image with svg / or canvas in dart, so i use flutter because flutter is very easy for make any widget and can save to image, so i don't need learn canvas for generate this image hehe 😦
 
 ## How Work
 
