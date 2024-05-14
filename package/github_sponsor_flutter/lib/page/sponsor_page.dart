@@ -164,7 +164,7 @@ class _SponsorPageState extends State<SponsorPage> {
 
   Future<void> onFinished() async {
     await Future.delayed(const Duration(seconds: 2));
-    // await widget.onRefreshFinished();
+    await widget.onRefreshFinished();
   }
 
   @override
@@ -306,11 +306,11 @@ class _SponsorPageState extends State<SponsorPage> {
                 children: [
                   sponsorsWidget(
                     title: "Current",
-                    sponsorAccountDatas: sponsorData.current,
+                    sponsorAccountDatas: sponsorData.past,
                   ),
                   sponsorsWidget(
                     title: "Past",
-                    sponsorAccountDatas: sponsorData.past,
+                    sponsorAccountDatas: sponsorData.current,
                   ),
                 ],
               ),
@@ -437,21 +437,21 @@ class _SponsorPageState extends State<SponsorPage> {
             child: ProfilePicture(
               pathImage: sponsorAccountData.avatar ?? "",
               nick_name: value_data,
-              height: context.height / 30,
-              width: context.height / 30,
+              height: context.height / 20,
+              width: context.height / 20,
               borderRadius: BorderRadius.all(Radius.circular(context.height / 70)),
               onPressed: () {},
             ),
           ),
           const SizedBox(
-            width: 5,
+            height: 5,
           ),
           Builder(
             builder: (context) {
               TextStyle textStyle = TextStyle(
                 color: context.theme.indicatorColor,
                 fontFamily: "ShadowsIntoLight",
-                fontSize: (context.height / 100),
+                fontSize: (context.height / 60),
                 shadows: [
                   BoxShadow(
                     color: context.theme.shadowColor.withAlpha(110),
