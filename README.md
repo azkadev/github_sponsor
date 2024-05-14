@@ -40,7 +40,7 @@ setelah berhasil jalan, applikasi automatis akan menggenerate gambar sponsor lal
 
 
 <p align="center"> 
-    <img src=".github/sponsor.png" width="312" height="312">
+    <img src=".github/sponsor.png" >
 </p>
 
 <!-- <img align="center" src=".github/sponsor.png"> -->
