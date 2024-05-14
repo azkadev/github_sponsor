@@ -259,7 +259,7 @@ class _SponsorPageState extends State<SponsorPage> {
                         TextStyle textStyle = TextStyle(
                           color: context.theme.indicatorColor,
                           fontWeight: FontWeight.bold,
-                          fontSize: context.height / 27,
+                          fontSize: context.height / 15,
                           fontFamily: "ShadowsIntoLight",
                           shadows: [
                             BoxShadow(
