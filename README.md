@@ -34,6 +34,7 @@ setelah berhasil jalan, applikasi automatis akan menggenerate gambar sponsor lal
 
 ## Example Result
 
-<img align="center" src=".github/sponsor.png">
+![](.github/sponsor.png)
+<!-- <img align="center" src=".github/sponsor.png"> -->
 
 I don't have expert or high value for design, if you wan't other style you can create issue in here 
