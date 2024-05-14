@@ -111,24 +111,26 @@ class _GithubSponsorFlutterState extends State<GithubSponsorFlutter> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          Uint8List? data = await globalKey.toImagePng();
-          if (data == null) {
-            if (kDebugMode) {
-              print("FAILED");
+          try { 
+            Uint8List? data = await globalKey.toImagePng();
+            if (data == null) {
+              if (kDebugMode) {
+                print("FAILED");
+              }
+              return;
+            } 
+            Directory directory = Directory(path.join(Directory.current.path, "temp"));
+            if (directory.existsSync() == false) {
+              await directory.create(recursive: true);
             }
-            return;
-          }
-          Directory directory = Directory(path.join(Directory.current.path, "temp"));
-          if (directory.existsSync() == false) {
-            await directory.create(recursive: true);
-          }
-          // Direct
-          DateTime dateTime = DateTime.now();
-          File file = File(path.join(directory.path, "${dateTime.hour}:${dateTime.minute}:${dateTime.second}.png"));
-          await file.writeAsBytes(data);
-          if (kDebugMode) {
-            print("FINISHED");
-          }
+            // Direct
+            DateTime dateTime = DateTime.now();
+            File file = File(path.join(directory.path, "${dateTime.hour}:${dateTime.minute}:${dateTime.second}.png"));
+            await file.writeAsBytes(data);
+            if (kDebugMode) {
+              print("FINISHED");
+            }
+          } catch (e) {}
         },
         tooltip: 'Increment',
         child: const Icon(Icons.screenshot_monitor_sharp),
@@ -160,35 +162,37 @@ class _GithubSponsorFlutterState extends State<GithubSponsorFlutter> {
                 githubSponsor: githubSponsor,
                 onRefreshFinished: () async {
                   print("finished");
-                  Uint8List? data = await globalKey.toImagePng();
-                  if (data == null) {
-                    if (kDebugMode) {
-                      print("FAILED");
+                  try {
+                    Uint8List? data = await globalKey.toImagePng();
+                    if (data == null) {
+                      if (kDebugMode) {
+                        print("FAILED");
+                      }
+                      return;
                     }
-                    return;
-                  }
-                  Directory directory = Directory(path.join(Directory.current.path, "temp"));
-                  if (directory.existsSync() == false) {
-                    await directory.create(recursive: true);
-                  }
-                  File file = File(path.join(directory.path, "sponsor.png"));
-                  if (file.existsSync()) {
-                    file.deleteSync(recursive: true);
-                  }
-                  await file.writeAsBytes(data);
-                  if (kDebugMode) {
-                    print("FINISHED");
-                  }
-                  // await githubSponsor.releaseFile(
-                  //   repoName: repoName,
-                  //   isOrg: isOrg,
-                  //   releaseTagName: releaseTagName,
-                  //   releaseFile: releaseFile,
-                  // );
-                  //
-                  if (kDebugMode == false) {
-                    // exit(0);
-                  }
+                    Directory directory = Directory(path.join(Directory.current.path, "temp"));
+                    if (directory.existsSync() == false) {
+                      await directory.create(recursive: true);
+                    }
+                    File file = File(path.join(directory.path, "sponsor.png"));
+                    if (file.existsSync()) {
+                      file.deleteSync(recursive: true);
+                    }
+                    await file.writeAsBytes(data);
+                    if (kDebugMode) {
+                      print("FINISHED");
+                    }
+                    // await githubSponsor.releaseFile(
+                    //   repoName: repoName,
+                    //   isOrg: isOrg,
+                    //   releaseTagName: releaseTagName,
+                    //   releaseFile: releaseFile,
+                    // );
+                    //
+                    if (kDebugMode == false) {
+                      // exit(0);
+                    }
+                  } catch (e) {}
                 },
               ),
             ),

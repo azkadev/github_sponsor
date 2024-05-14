@@ -68,7 +68,7 @@ class GithubSponsor {
     token ??= token_github;
 
     if (token.isEmpty) {
-      var res = await gitHub(token: token).users.getUser(username);
+      var res = await gitHub(token: token).users.getUser("azkadev");
       return AccountData.create(
         username: res.login,
         avatar: res.avatarUrl,

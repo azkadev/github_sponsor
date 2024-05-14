@@ -133,8 +133,15 @@ class _SponsorPageState extends State<SponsorPage> {
             }).toList();
           }(),
         ); 
-        // sponsorData = (await widget.githubSponsor.getSponsor(username: ("azkadev").trim())).sponsors;
+ 
+        setState(() {});
 
+        accountData = await widget.githubSponsor.getMe();
+  
+
+        sponsorData = (await widget.githubSponsor.getSponsor(username: ("azkadev").trim())).sponsors;
+
+ 
         setState(() {});
 
 
@@ -157,7 +164,7 @@ class _SponsorPageState extends State<SponsorPage> {
 
   Future<void> onFinished() async {
     await Future.delayed(const Duration(seconds: 2));
-    await widget.onRefreshFinished();
+    // await widget.onRefreshFinished();
   }
 
   @override
