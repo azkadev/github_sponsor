@@ -111,14 +111,14 @@ class _GithubSponsorFlutterState extends State<GithubSponsorFlutter> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          try { 
+          try {
             Uint8List? data = await globalKey.toImagePng();
             if (data == null) {
               if (kDebugMode) {
                 print("FAILED");
               }
               return;
-            } 
+            }
             Directory directory = Directory(path.join(Directory.current.path, "temp"));
             if (directory.existsSync() == false) {
               await directory.create(recursive: true);
@@ -126,11 +126,16 @@ class _GithubSponsorFlutterState extends State<GithubSponsorFlutter> {
             // Direct
             DateTime dateTime = DateTime.now();
             File file = File(path.join(directory.path, "${dateTime.hour}:${dateTime.minute}:${dateTime.second}.png"));
+            if (kDebugMode) {
+              file = File("/home/galaxeus/Documents/galaxeus/app/github_sponsor/.github/sponsor.png");
+            }
             await file.writeAsBytes(data);
             if (kDebugMode) {
               print("FINISHED");
             }
-          } catch (e) {}
+          } catch (e) {
+            print(e);
+          }
         },
         tooltip: 'Increment',
         child: const Icon(Icons.screenshot_monitor_sharp),

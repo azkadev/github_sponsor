@@ -300,6 +300,9 @@ class _SponsorPageState extends State<SponsorPage> {
                       },
                     ),
                   ),
+                  SizedBox(
+                    height: 15,
+                  ),
                 ],
               ),
               Column(
