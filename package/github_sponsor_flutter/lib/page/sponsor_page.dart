@@ -133,7 +133,7 @@ class _SponsorPageState extends State<SponsorPage> {
             }).toList();
           }(),
         ); 
-        sponsorData = (await widget.githubSponsor.getSponsor(username: ("azkadev").trim())).sponsors;
+        // sponsorData = (await widget.githubSponsor.getSponsor(username: ("azkadev").trim())).sponsors;
 
         setState(() {});
 

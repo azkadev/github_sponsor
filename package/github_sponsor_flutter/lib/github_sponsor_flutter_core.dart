@@ -187,7 +187,7 @@ class _GithubSponsorFlutterState extends State<GithubSponsorFlutter> {
                   // );
                   //
                   if (kDebugMode == false) {
-                    exit(0);
+                    // exit(0);
                   }
                 },
               ),
