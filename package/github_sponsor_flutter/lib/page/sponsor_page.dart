@@ -136,10 +136,10 @@ class _SponsorPageState extends State<SponsorPage> {
  
         setState(() {});
 
-        accountData = await widget.githubSponsor.getMe();
+        // accountData = await widget.githubSponsor.getMe();
   
 
-        sponsorData = (await widget.githubSponsor.getSponsor(username: ("azkadev").trim())).sponsors;
+        // sponsorData = (await widget.githubSponsor.getSponsor(username: ("azkadev").trim())).sponsors;
 
  
         setState(() {});

@@ -41,9 +41,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:general_lib_flutter/general_lib_flutter.dart';
 import 'package:github_sponsor_flutter/github_sponsor/github_sponsor_core.dart';
-import 'package:github_sponsor_flutter/page/apslpaslap.dart';
-import 'package:github_sponsor_flutter/page/sponsor_page.dart';
-import "package:path/path.dart" as path;
 import 'package:flutter/rendering.dart';
 import "dart:ui" as ui;
 
