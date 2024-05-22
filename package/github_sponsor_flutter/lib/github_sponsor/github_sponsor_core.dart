@@ -37,6 +37,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 // ignore_for_file: non_constant_identifier_names, avoid_print
 
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:collection/collection.dart';
 import 'package:general_lib/general_lib.dart';
@@ -44,7 +45,7 @@ import 'package:github/github.dart';
 import 'package:github_sponsor_scheme/scheme/respond_scheme/respond_scheme.dart';
 import 'package:http/http.dart';
 import 'package:mime/mime.dart';
-import 'package:universal_io/io.dart';
+// import 'package:universal_io/io.dart';
 import "package:path/path.dart" as path;
 
 class GithubSponsor {

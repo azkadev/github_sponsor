@@ -41,9 +41,43 @@ void githubSponsorFlutter({
 }) async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(const GithubSponsorFlutterAppMain());
+  runApp(const SLebew());
 }
+class SLebew extends StatelessWidget {
+  const SLebew({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    
+    return GeneralLibFlutterAppMain(
+      generalLibFlutterApp: generalLibFlutterApp,
+      builder: (themeMode, lightTheme, darkTheme, widget) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          themeMode: themeMode,
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          // builder: (context, child) {
+          //   return Stack(
+          //     children: [
+          //       MaterialApp(
+          //         home: ChatPage.test(),
+          //       ),
+          //       Positioned.fill(
+          //         child: child ?? const SizedBox.shrink(),
+          //       ),
+          //     ],
+          //   );
+
+          //   // return Simulate(home: child ?? SizedBox.shrink());
+          // },
+          home: const GithubSponsorFlutter(),
+        );
+      },
+    );
+  }
+}
 GeneralLibFlutterApp generalLibFlutterApp = GeneralLibFlutterApp();
 
 class GithubSponsorFlutterAppMain extends StatefulWidget {
@@ -55,7 +89,8 @@ class GithubSponsorFlutterAppMain extends StatefulWidget {
 
 class _GithubSponsorFlutterAppMainState extends State<GithubSponsorFlutterAppMain> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+
     return GeneralLibFlutterAppMain(
       generalLibFlutterApp: generalLibFlutterApp,
       builder: (themeMode, lightTheme, darkTheme, widget) {

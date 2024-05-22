@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Version=1.0.0
-Name=Github Sponsor Flutter
-GenericName=General Application
-Exec=github-sponsor-flutter-app -- %u
-Categories=Music;Media;
-Keywords=Hello;World;Test;Application;
-StartupNotify=true

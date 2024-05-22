@@ -11,7 +11,7 @@ dependencies:
   general_lib: "^0.0.40"
   general_lib_flutter: "^0.0.20"
   path: "^1.9.0"
-  universal_io: "^2.2.2"
+  # universal_io: "^2.2.2"
   github_sponsor_scheme:
     path: "../github_sponsor_scheme"
   packagex: "^0.0.57"

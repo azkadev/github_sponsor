@@ -35,7 +35,7 @@ setelah berhasil jalan, applikasi automatis akan menggenerate gambar sponsor lal
 ## Example Result
  
 <p align="center"> 
-    <img src=".github/sponsor.png" >
+    <img src="https://raw.githubusercontent.com/azkadev/github_sponsor/main/.github/sponsor.png" >
 </p>
  
 I don't have expert or high value for design, if you wan't other style you can create issue in here 
