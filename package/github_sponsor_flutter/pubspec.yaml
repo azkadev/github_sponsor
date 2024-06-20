@@ -1,57 +1,57 @@
-name: "github_sponsor_flutter"
-description: "A new Flutter project."
-publish_to: "none"
-version: "1.0.0"
-environment:
-  sdk: ">=3.3.4 <4.0.0"
-dependencies:
-  flutter:
-    sdk: "flutter"
-  cupertino_icons: "^1.0.6"
-  general_lib: "^0.0.40"
-  general_lib_flutter: "^0.0.20"
-  path: "^1.9.0"
-  # universal_io: "^2.2.2"
-  github_sponsor_scheme:
-    path: "../github_sponsor_scheme"
-  packagex: "^0.0.57"
-  github: ^9.24.0
-  mason_logger: ^0.2.15
-  collection: ^1.18.0
-  mime: ^1.0.5
-  http: any
-dev_dependencies:
-  flutter_test:
-    sdk: "flutter"
-  flutter_lints: "^3.0.0"
-  msix: "^3.16.7"
-flutter:
+name: 'github_sponsor_flutter'
+description: 'A new Flutter project.'
+publish_to: 'none'
+version: '0.0.0'
+environment: 
+  sdk: '>=3.3.3 <4.0.0'
+dependencies: 
+  flutter: 
+    sdk: 'flutter'
+  cupertino_icons: '^1.0.6'
+  general_lib: '^0.0.42'
+  general_lib_flutter: '^0.0.22'
+  path: '^1.9.0'
+  github_sponsor_scheme: 
+    path: '../github_sponsor_scheme'
+  packagex: '^0.0.58'
+  github: '^9.24.0'
+  mason_logger: '^0.2.15'
+  collection: '^1.18.0'
+  mime: '^1.0.5'
+  http: 'any'
+dev_dependencies: 
+  flutter_test: 
+    sdk: 'flutter'
+  flutter_lints: '^3.0.0'
+  msix: '^3.16.7'
+flutter: 
   uses-material-design: true
-
-  fonts:
-    - family: Pacifico
-      fonts:
-        - asset: assets/fonts/Pacifico-Regular.ttf
-    - family: ShadowsIntoLight
-      fonts:
-        - asset: assets/fonts/ShadowsIntoLight-Regular.ttf
-packagex:
-  name: "github_sponsor_flutter"
-  dart_target: "github_sponsor_flutter"
-  flutter_target: "main"
-  dart_name: "github_sponsor_flutter"
-  flutter_name: "github_sponsor_flutter"
+  fonts: 
+    - family: 'Pacifico'
+      fonts: 
+        - asset: 'assets/fonts/Pacifico-Regular.ttf'
+    - family: 'ShadowsIntoLight'
+      fonts: 
+        - asset: 'assets/fonts/ShadowsIntoLight-Regular.ttf'
+packagex: 
+  name: 'github_sponsor_flutter'
+  dart_target: 'github_sponsor_flutter'
+  flutter_target: 'main'
+  dart_name: 'github_sponsor_flutter'
+  flutter_name: 'github_sponsor_flutter'
   is_without_platform_name: true
-  flutter_commands:
+  flutter_commands: 
     obfuscate: true
-    split-debug-info: "0.0.0"
-    build-name: "0.0.0"
+    split-debug-info: '0.0.0'
+    build-name: '0.0.0'
     build-number: 1
     split-per-abi: true
     no-tree-shake-icons: true
-  project_id: "azkadev.packagex"
-  github_username: "azkadev"
+  project_id: 'azkadev.packagex'
+  github_username: 'azkadev'
   github_is_org: false
-msix_config:
-  display_name: "github_sponsor_flutter"
+msix_config: 
+  display_name: 'github_sponsor_flutter'
   install_certificate: false
+dependency_overrides: 
+  pointycastle: '3.8.0'
