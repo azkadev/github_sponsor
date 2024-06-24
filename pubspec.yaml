@@ -7,6 +7,7 @@ issue_tracker: 'https://github.com/{main_username_owner}/github_sponsor/issues'
 documentation: 'https://github.com/{main_username_owner}/github_sponsor/tree/main/docs'
 funding: 
   - 'https://github.com/sponsors/{main_username_owner}'
+  - 'https://github.com/sponsors/azkadev'
 platforms: 
   android: null
   ios: null
