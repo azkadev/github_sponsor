@@ -30,3 +30,10 @@ build/
 
 *.jpeg
 *.png
+*.exe
+*.deb
+*.sqlite-*
+*.sqlite
+docs/canvaskit
+*/canvaskit
+/build/

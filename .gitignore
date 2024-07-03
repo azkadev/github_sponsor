@@ -6,3 +6,10 @@ command_*.sh
 
 *.js
 *.js.*
+*.exe
+*.deb
+*.sqlite-*
+*.sqlite
+docs/canvaskit
+*/canvaskit
+/build/
