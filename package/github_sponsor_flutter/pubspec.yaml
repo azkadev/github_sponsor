@@ -8,12 +8,12 @@ dependencies:
   flutter:
     sdk: 'flutter'
   cupertino_icons: '^1.0.6'
-  general_lib: '^0.0.52'
-  general_lib_flutter: '^0.0.33'
+  general_lib: '^0.0.53'
+  general_lib_flutter: '^0.0.34'
   path: '^1.9.0'
   github_sponsor_scheme:
     path: '../github_sponsor_scheme'
-  packagex: '^0.0.67'
+  packagex: '^0.0.68'
   github: '^9.24.0'
   mason_logger: '^0.3.1'
   collection: '^1.19.0'
