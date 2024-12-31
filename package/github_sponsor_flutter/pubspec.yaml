@@ -16,7 +16,7 @@ dependencies:
   packagex: '^0.0.66'
   github: '^9.24.0'
   mason_logger: '^0.3.1'
-  collection: '^1.18.0'
+  collection: '^1.19.0'
   mime: '^2.0.0'
   http: '^1.2.2'
 dev_dependencies:
