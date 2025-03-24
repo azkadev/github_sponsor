@@ -5,24 +5,24 @@ version: '0.0.0'
 environment:
   sdk: '>=3.6.0 <4.0.0'
 dependencies:
+  collection: '^1.19.0'
+  cupertino_icons: '^1.0.6'
   flutter:
     sdk: 'flutter'
-  cupertino_icons: '^1.0.6'
-  general_lib: '^0.0.71'
-  general_lib_flutter: '^0.0.42'
-  path: '^1.9.0'
+  general_bot_library_project:
+    path: '../../../general_bot_library_project/package/general_bot_library_project'
+  general_universe: '^0.0.0'
+  general_universe_flutter: '^0.0.0'
   github_sponsor_scheme:
     path: '../github_sponsor_scheme'
-  packagex: '^1.0.3'
-  github: '^9.24.0'
-  mason_logger: '^0.3.1'
-  collection: '^1.19.0'
-  mime: '^2.0.0'
   http: '^1.3.0'
+  mime: '^2.0.0'
+  packagex: '^0.0.0'
+  path: '^1.9.0'
 dev_dependencies:
+  flutter_lints: '^5.0.0'
   flutter_test:
     sdk: 'flutter'
-  flutter_lints: '^5.0.0'
   msix: '^3.16.7'
 flutter:
   uses-material-design: true
@@ -54,8 +54,8 @@ msix_config:
   display_name: 'github_sponsor_flutter'
   install_certificate: false
 dependency_overrides:
-  pointycastle: '4.0.0'
   mime: '^2.0.0'
+  pointycastle: '^4.0.0'
 funding:
   - 'https://github.com/sponsors/azkadev'
   - 'https://github.com/sponsors/generalfoss'
@@ -65,3 +65,10 @@ issue_tracker: 'https://t.me/DEVELOPER_GLOBAL_PUBLIC'
 documentation: 'https://youtube.com/@azkadev'
 project:
   type: ''
+  is_use_direct_package: false
+  is_private: false
+  developers:
+    - username: ''
+      note: ''
+      social_medias:
+        - 'https://github.com'
